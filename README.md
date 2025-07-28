@@ -41,6 +41,19 @@ This will place the `luna` binary in your `$GOPATH/bin` or `$HOME/go/bin` direct
    sudo mv luna /usr/local/bin/luna
    ```
 
+### Install Required Go Libraries
+
+Luna depends on several Go libraries for CLI, configuration, and markdown rendering. These libraries are automatically installed when you run `go install` or `go build`, but you can install them manually if needed:
+
+```sh
+go get github.com/spf13/cobra@latest
+go get github.com/spf13/viper@latest
+go get -u github.com/google/generative-ai-go/genai
+go get github.com/charmbracelet/glamour@latest
+```
+
+> These commands will add the packages to your Go module and download their latest versions.
+
 ## Getting a Gemini API Key
 
 Luna requires a Gemini API key from Google AI Studio.
